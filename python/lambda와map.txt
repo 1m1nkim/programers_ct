@@ -1,0 +1,23 @@
+def add(x, y):
+    return x + y
+x = 1;
+y = 1;
+list(map(add(x, y), mylist))
+
+>> 같은 의미의 코드
+list(map(lambda x, y: x + y, mylist1, mylist2))
+
+>> 비슷한 의미의 코드
+[x+y for x,y in zip(mylist1, mylist2)]
+
+위의 경우 map + lambda를 사용하여 익명함수를 사용하여 mylist값을 연산
+밑의 경우 표현식 + for 를 사용하여 mylist값을 연산
+
+
+#lambda함수 > 익명함수 
+add = lambda x, y : x + y
+
+map(fuction, iterable)
+#map function 과 iterable을 함께 사용
+lambda가 function
+mylist가 iterable

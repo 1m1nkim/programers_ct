@@ -1,0 +1,33 @@
+문자열 s에는 공백으로 구분된 숫자들이 저장되어 있습니다. str에 나타나는 숫자 중 최소값과 최대값을 찾아 이를 "(최소값) (최대값)"형태의 문자열을 반환하는 함수, solution을 완성하세요.
+예를들어 s가 "1 2 3 4"라면 "1 4"를 리턴하고, "-1 -2 -3 -4"라면 "-4 -1"을 리턴하면 됩니다.
+
+내 답
+#def solution(s):
+#    a1 = s.split()
+#    a1 = [int(i) for i in a1]
+#    a = int(min(a1))
+#    b = int(max(a1))
+#    answer = f"{a} {b}"
+#    return answer
+#
+
+다른 사람 답
+def solution(s):
+    s = list(map(int,s.split()))   
+    return str(min(s)) + " " + str(max(s))
+
+#    answer = f"{a} {b}"
+-> f-string 구문으로 c의 print와 비슷함 f"asd {변수값}"
+
+#a1 = [int(i) for i in a1] 와 같은 의미
+-> for 구문 쓰지 않고 map 함수 익숙해지기
+
+내 코드로 활용해보기
+
+def solution(s):
+    a1 = s.split()
+    a1 = [int(i) for i in a1]
+    return str(min(a1)) + " " + str(max(a1))
+
+1. 리스트 값 비교를 위한 a1 리스트 정수화
+2. min, max 함수 활용 후 str 값으로 출력

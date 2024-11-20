@@ -1,0 +1,31 @@
+1-1. 입력된 수가 짝수라면 2로 나눕니다. 
+1-2. 입력된 수가 홀수라면 3을 곱하고 1을 더합니다. 
+2. 결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다. 
+
+내 답
+
+def solution(num):
+    for i in range(500):
+        if num % 2 ==0:
+            num = num / 2
+        elif num == 1:
+            return i
+        elif i > 500:
+            return -1
+        else:
+            num = num * 3 + 1
+
+#테스트 3이 626331인데 안됌 
+#--> 나는 range를 500번 돌렸는데 조건에 elif i > 500: return -1을 함 
+#--> 확인해보니 626331은 503번째에 1이 되는데 for문이 500번에서 끝나서 return을 하지못하고 null값이 됌
+
+#i값에 따라 500번을 확인하는게 아닌 range가 500번이 되서 끝났을 때 자연스럽게 return 해주는 방식으로 수정
+def solution(num):
+    for i in range(500):
+        if num % 2 ==0:
+            num = num / 2
+        elif num == 1:
+            return i
+        else:
+            num = num * 3 + 1
+    return -1

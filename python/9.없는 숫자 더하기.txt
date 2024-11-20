@@ -1,0 +1,6 @@
+0부터 9까지의 숫자 중 일부가 들어있는 정수 배열 numbers가 매개변수로 주어집니다. numbers에서 찾을 수 없는 0부터 9까지의 숫자를 모두 찾아 더한 수를 return 하도록 solution 함수를 완성해주세요.
+
+def solution(numbers):
+    return 45 - sum(numbers)
+    #이미 정수 배열이라 굳이 변환해주지 않아도 됌 - 문제를 잘 읽자 ..
+    #return 45 - sum([int(i) for i in numbers])
